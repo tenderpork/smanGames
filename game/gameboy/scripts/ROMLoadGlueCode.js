@@ -61,7 +61,7 @@ function fileLoadROM() {
 function downloadFile(fileName, registrationHandler) {
     var ajax = new XMLHttpRequest();
     ajax.onload = registrationHandler;
-    ajax.open("GET", "https://github.com/tenderpork/smanGames/tree/main/game/gameboy/Binaries/" + fileName + "?raw=true", true);
+    ajax.open("GET", "https://github.com/tenderpork/smanGames/raw/main/game/gameboy/" + fileName, true);
     ajax.responseType = "arraybuffer";
     ajax.overrideMimeType("text/plain; charset=x-user-defined");
     ajax.send(null);
